@@ -1,10 +1,9 @@
 package virtualPetShelterAmok;
 
-public class OrganicCat extends OrganicPet{
+public class OrganicCat extends OrganicPet {
 
 	public OrganicCat(String name, int hunger, int thirst, int boredom, int waste, int health, int happiness,
 			String description) {
-		
 		this.name = name;
 		this.hunger = hunger;
 		this.thirst = thirst;
@@ -13,8 +12,7 @@ public class OrganicCat extends OrganicPet{
 		this.health = health;
 		this.happiness = happiness;
 		this.description = description;
-		
-		
+
 	}
-	
+
 }

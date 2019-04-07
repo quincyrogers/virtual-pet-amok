@@ -2,7 +2,6 @@ package virtualPetShelterAmok;
 
 import java.util.Scanner;
 
-
 public class VirtualPetShelterAmokApp {
 
 	public static void main(String[] args) {
@@ -11,7 +10,7 @@ public class VirtualPetShelterAmokApp {
 		BasswoodShelter bwShelter = new BasswoodShelter();
 
 		OrganicDog cuddy = new OrganicDog("Cuddy", 10, 10, 10, 10, 10, 10,
-				"Young and wild mixed breed with a loose bladder. His former owner loves Persian Rugs and so did Cuddy.");
+				"Young and wild mixed breed with a loose bladder. His former owner loved Persian Rugs and so did Cuddy.");
 		OrganicCat smokie = new OrganicCat("Smokie", 10, 10, 10, 10, 10, 10,
 				"An American Bobtail but he quite possibly could be a bobcat so be careful.. either way Smokie would do well on a farm or as possibly an agent in the war on sewer rats in NYC.");
 		RoboDawg maeve = new RoboDawg("Maeve", 10, 10, 10, 10,
@@ -23,13 +22,14 @@ public class VirtualPetShelterAmokApp {
 		bwShelter.admit(smokie);
 		bwShelter.admit(maeve);
 		bwShelter.admit(misterb);
-		
-		System.out.println("Welcome to Basswood Virtual Pet Shelter Linden's finest gathering place for pets and people looking to for family. It's more than a shelter people!");
+
+		System.out.println(
+				"Welcome to Basswood Virtual Pet Shelter Linden's finest gathering place for pets and people looking to for family. It's more than a shelter people!");
 		System.out.println("");
 		System.out.println("Here is a list of our furry organic and shiny robotic pets: ");
 		System.out.println("");
 		bwShelter.showAllVirtualPets();
-		
+
 		String choice = "";
 		do {
 			System.out.println("How would you like to help our buddies today?");
@@ -43,13 +43,13 @@ public class VirtualPetShelterAmokApp {
 			System.out.println("Type 7 - to oil the robotic pets");
 			System.out.println("Type 8 - to exit (hopefully it's with a new pet!");
 			choice = input.nextLine();
-			
+
 			if (choice.equals("1")) {
 				System.out.println("Which type of pet will you be admitting to the Basswood Shelter?");
 				System.out.println("Organic Dog, Organic Cat, RoboDawg or RoboCat?");
 				String virtualPet = input.nextLine();
 
-				if (virtualPet.equalsIgnoreCase("Dog, Organic Dog")) {
+				if (virtualPet.equalsIgnoreCase("Dog")) {
 					System.out.println("Please enter the name of the organic dog");
 					String name = input.nextLine();
 					System.out.println("Tell us a little about your pet");
@@ -57,7 +57,7 @@ public class VirtualPetShelterAmokApp {
 					System.out.println();
 					bwShelter.admit(new OrganicDog(name, 10, 10, 10, 10, 10, 10, description));
 
-				} else if (virtualPet.equalsIgnoreCase("Cat, Organic Cat")) {
+				} else if (virtualPet.equalsIgnoreCase("Cat")) {
 					System.out.println("Please enter the name of the organic cat");
 					String petName = input.nextLine();
 					System.out.println("Tell us a little about your pet");
@@ -89,7 +89,7 @@ public class VirtualPetShelterAmokApp {
 				String name = input.nextLine();
 				System.out.println("");
 				System.out.println("Thank you for choosing" + name + " !");
-			bwShelter.adopt(bwShelter.findPet(name));
+				bwShelter.adopt(bwShelter.findPet(name));
 			}
 			if (choice.equalsIgnoreCase("3")) {
 				System.out.println("Here's an update on our pets");
@@ -154,5 +154,5 @@ public class VirtualPetShelterAmokApp {
 
 		input.close();
 	}
-	
+
 }
